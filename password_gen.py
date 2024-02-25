@@ -15,13 +15,13 @@ no_of_letters = int(input("How many letters you want in your password ? :  "))
 digits_required= int(input("How many digits you want ? : "))
 symbols_choice = int(input("How many symbols you want ? : "))
 
-for l in range(1,no_of_letters+1):
+for l in range(no_of_letters):
     generated_password+= random.choice(Letters)
     
-for n in range(1,digits_required+1):
+for n in range(digits_required):
     generated_password+= random.choice(numbers)
 
-for s in range(1,symbols_choice+1):
+for s in range(symbols_choice):
     generated_password+= random.choice(symbols)
 
 final_password = ''
@@ -30,4 +30,4 @@ random.shuffle(generated_password)
 for i in generated_password:
     final_password = final_password + i
 
-print(final_password)
+print("Your auto-generated password: " , final_password)
